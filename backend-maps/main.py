@@ -18,15 +18,19 @@ app = FastAPI(title="Argo Float Data API", version="2.0.0")
 # e.g. ALLOWED_ORIGINS=https://your-app.vercel.app,https://your-app-git-main.vercel.app
 _raw_origins = os.getenv("ALLOWED_ORIGINS", "")
 _extra_origins = [o.strip() for o in _raw_origins.split(",") if o.strip()]
-origins = list(set([
+default_origins = [
     "http://localhost:3005",
     "http://localhost:3010",
     "http://localhost:9002",
     "http://localhost:9003",
-] + _extra_origins))
+    "https://oceanus-graph-explorer.vercel.app",
+    "https://*.vercel.app",
+]
+origins = list(set(default_origins + _extra_origins))
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
