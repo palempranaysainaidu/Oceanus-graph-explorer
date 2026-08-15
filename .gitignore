@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Python / Conda
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.env
+.env.*
+!.env.example
+secrets/*
+!secrets/.gitignore
+!secrets/README.md
+.venv/
+env/
+venv/
+.conda/
+*.egg-info/
+*.egg
+
+
+sih_env/
+myenv/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / Dist
+dist/
+build/

@@ -1,0 +1,66 @@
+
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "India" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [68.1, 7.2], [68.1, 35.5], [97.4, 35.5], [97.4, 7.2], [68.1, 7.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Africa Horn" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [41, -2], [51.4, 12], [43, 11], [41, -2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Australia West" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [112.9, -35], [112.9, -12], [129, -12], [129, -35], [112.9, -35]
+          ]
+        ]
+      }
+    },
+    {
+        "type": "Feature",
+        "properties": { "name": "Madagascar" },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [43.3, -25.6], [50.5, -12], [47, -12.5], [43.3, -25.6]
+                ]
+            ]
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Oman/Yemen" },
+      "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+              [
+                  [52, 12.6], [59, 23], [54, 22], [43, 15], [52, 12.6]
+              ]
+          ]
+      }
+    }
+  ]
+}

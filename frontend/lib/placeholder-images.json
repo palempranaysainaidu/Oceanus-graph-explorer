@@ -1,0 +1,23 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "map-visualization",
+      "description": "A screenshot of the main map visualization screen.",
+      "imageUrl": "https://picsum.photos/seed/map1/600/400",
+      "imageHint": "world map"
+    },
+    {
+      "id": "chatbot-view",
+      "description": "A screenshot of the AI chatbot interface.",
+      "imageUrl": "https://picsum.photos/seed/chat1/600/400",
+      "imageHint": "chat bot"
+    },
+    {
+      "id": "float-dashboard",
+      "description": "A screenshot of the detailed float data dashboard with charts.",
+      "imageUrl": "https://picsum.photos/seed/dash1/600/400",
+      "imageHint": "data dashboard"
+    }
+  ]
+}

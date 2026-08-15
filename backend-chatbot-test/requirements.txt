@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+langchain
+langchain-openai
+langgraph
+langchain-groq
+pandas
+neo4j
+psycopg2-binary
+tiktoken
+python-dotenv
+chromadb==0.4.22
+onnxruntime
+sentence-transformers
+pinecone
+sqlalchemy-cockroachdb
+groq
