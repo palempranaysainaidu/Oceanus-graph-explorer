@@ -1,7 +1,7 @@
+@import "leaflet/dist/leaflet.css";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "leaflet/dist/leaflet.css";
 
 @layer base {
   :root {
