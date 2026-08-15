@@ -25,6 +25,8 @@ interface SearchResult {
   temperature: number;
 }
 
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
 export default function SearchCyclesPage() {
   const [minTemp, setMinTemp] = useState("10");
   const [maxTemp, setMaxTemp] = useState("15");
@@ -43,7 +45,7 @@ export default function SearchCyclesPage() {
 
     try {
       const res = await fetch(
-        `http://localhost:8000/api/graph/search/cycles?min_temp=${minTemp}&max_temp=${maxTemp}`
+        `${API_URL}/api/graph/search/cycles?min_temp=${minTemp}&max_temp=${maxTemp}`
       );
       if (!res.ok) throw new Error(`Search failed (${res.status})`);
       const data = await res.json();
