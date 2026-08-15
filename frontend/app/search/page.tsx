@@ -25,7 +25,7 @@ interface SearchResult {
   temperature: number;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_MAPS_BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
 
 export default function SearchCyclesPage() {
   const [minTemp, setMinTemp] = useState("10");

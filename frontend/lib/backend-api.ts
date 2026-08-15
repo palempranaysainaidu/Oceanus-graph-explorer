@@ -39,7 +39,7 @@
     message_count: number;
   }
 
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+  const BACKEND_URL = process.env.NEXT_PUBLIC_CHATBOT_BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8001';
 
   export class BackendApiService {
     private baseUrl: string;

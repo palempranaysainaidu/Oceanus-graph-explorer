@@ -7,7 +7,7 @@
  * absent.
  */
 
-const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const BACKEND = process.env.NEXT_PUBLIC_MAPS_BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
 
 function buildUrl(path: string): string {
   const base = BACKEND.endsWith("/") ? BACKEND.slice(0, -1) : BACKEND;

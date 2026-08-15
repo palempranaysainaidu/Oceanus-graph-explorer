@@ -25,7 +25,7 @@ export interface ArgoFloat {
   pressure: MeasurementPoint[];
 }
 
-const MAPS_BACKEND_URL = process.env.NEXT_PUBLIC_MAPS_BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+const MAPS_BACKEND_URL = process.env.NEXT_PUBLIC_MAPS_BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
 
 // Function #1: Fetches the lightweight list of all float locations
 export async function getFloatLocations(): Promise<FloatLocation[]> {

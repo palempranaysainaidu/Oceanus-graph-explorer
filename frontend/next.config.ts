@@ -43,15 +43,17 @@ const nextConfig: NextConfig = {
     return config;
   },
   async rewrites() {
-    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+    const mapsBackendUrl = process.env.NEXT_PUBLIC_MAPS_BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+    const chatbotBackendUrl = process.env.NEXT_PUBLIC_CHATBOT_BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8001';
+
     return [
-      { source: '/api/floats', destination: `${backendUrl}/api/floats` },
-      { source: '/api/refresh-floats', destination: `${backendUrl}/api/refresh-floats` },
-      { source: '/api/float/:path*', destination: `${backendUrl}/api/float/:path*` },
-      { source: '/query', destination: `${backendUrl}/query` },
-      { source: '/session/:path*', destination: `${backendUrl}/session/:path*` },
-      { source: '/api/graph/:path*', destination: `${backendUrl}/api/graph/:path*` },
-      { source: '/graph/:path*', destination: `${backendUrl}/graph/:path*` },
+      { source: '/api/floats', destination: `${mapsBackendUrl}/api/floats` },
+      { source: '/api/refresh-floats', destination: `${mapsBackendUrl}/api/refresh-floats` },
+      { source: '/api/float/:path*', destination: `${mapsBackendUrl}/api/float/:path*` },
+      { source: '/api/graph/:path*', destination: `${mapsBackendUrl}/api/graph/:path*` },
+      { source: '/graph/:path*', destination: `${mapsBackendUrl}/graph/:path*` },
+      { source: '/query', destination: `${chatbotBackendUrl}/query` },
+      { source: '/session/:path*', destination: `${chatbotBackendUrl}/session/:path*` },
     ];
   },
 };
